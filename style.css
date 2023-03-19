@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./Image/bgImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-items {
+  background-color: #b4b4b9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.main-menu li {
+  border-radius: 5px;
+  padding: 12px 15px;
+  background-color: gray;
+  /* position: relative; */
+}
+.main-menu li:hover {
+  background-color: lightgray;
+}
+
+.main-menu > li > a {
+  color: white;
+}
+
+.main-menu li:hover .mega-menu {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, auto);
+}
+
+/* media query start */
+@media only screen and (max-width: 768px) {
+  .main-menu li:hover .mega-menu {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-menu li:hover .mega-menu {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+/* media query end */
+
+.mega-menu {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #b4b4b9;
+  padding: 10px;
+}
+
+.mega-menu .mega-menu-item .item {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 10px;
+}
+
+.main-menu .mega-menu .mega-header,
+.mega-menu-item a {
+  color: black;
+}
+
+.mega-menu .mega-menu-item .item i {
+  color: indigo;
+}
+
+.mega-menu .mega-menu-item .item:hover {
+  background-color: lightslategray;
+}
+
+.button-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-div button {
+  background: blue;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+}
